@@ -1,0 +1,48 @@
+{
+  "prd": [
+    {
+      "id": 1,
+      "name": "mmmmmmmm",
+      "price": "Amit",
+      "quantity": "Amit",
+      "categoryID": "Amit",
+      "imgURL": "Amit"
+    },
+    {
+      "id": 2,
+      "name": "Tapletsss",
+      "price": "Amit",
+      "quantity": "Amit",
+      "categoryID": "Amit",
+      "imgURL": "Amit"
+    },
+    {
+      "id": "f064",
+      "name": "New Laptop 3- Front QENA",
+      "price": 33,
+      "quantity": 333,
+      "categoryID": 1
+    },
+    {
+      "id": "552c",
+      "name": "New Laptop 3- Front QENA",
+      "price": 33,
+      "quantity": 333,
+      "categoryID": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptops"
+    },
+    {
+      "id": 2,
+      "name": "Taplets"
+    },
+    {
+      "id": 3,
+      "name": "Mobiles"
+    }
+  ]
+}

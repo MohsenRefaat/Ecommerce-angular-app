@@ -1,0 +1,84 @@
+<!-- <div class="mb-3">
+    <label for="prdCat" class="form-label">Category: </label>
+    <select #cat class="form-control" name="cat" id="prdCat"[(ngModel)]="selectedCatID" (change)="filterProductsByCatID()">
+        <option *ngFor="let cat of catList" [value]="cat.id">{{cat.name}}</option>
+    </select>
+</div> -->
+<!-- <div class="text-secondary">
+    [To Be Removed] for test:
+    {{selectedCatID}} <br>
+    <button type="button" class="btn btn-primary" (click)="changeCat()">changeCat</button>
+    <br>
+    <p>Orders Date: {{ orderDate | date: 'yyyy-MM-dd' }}</p>
+</div> -->
+<a><button class="btn btn-primary m-3" [routerLink]="['product/add']">New Product</button></a>
+
+<hr>
+<!-- <table class="table">
+    <thead class="bg-dark text-light">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>image</th>
+            <th>Av. quantity</th>
+            <th>price in USD</th>
+            <th>price in EGP</th>
+            <th>Count</th>
+            <th>Details</th>
+            <th>Add</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prd of prdListOfCat; let i=index">
+            <td>{{prd.id}}</td>
+            <td>{{prd.name}}</td>
+            <td><img LightBox [src]="prd.imgURL" alt=""></td>
+            <td>
+                <div *ngIf="prd.quantity!=0">{{prd.quantity}}</div>
+                <div *ngIf="prd.quantity==0">Out Of Stock</div>
+            </td>
+            <td>{{prd.price |currency:'USD':'symbol' }}</td>
+            <td>{{prd.price |USDtoEGP |currency:'EGP':'code'}}</td>
+            <td><input #itemsCount type="number" class="form-control"></td>
+            <td> <button type="button" class="btn btn-primary" (click)="openPrdDetails(prd.id)">Details</button></td>
+            <td> <button type="button" class="btn btn-primary" (click)="buy(prd.price, itemsCount.value)">Add to
+                    cart</button></td>
+        </tr>
+    </tbody>
+</table> -->
+<div class="row g-3">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let prd of prdListOfCat;">
+    <div class="card h-100 shadow-sm">
+      <img LightBox [src]="prd.imgURL" class="card-img-top" alt="{{prd.name}}"
+        style="height: 150px; object-fit: contain;">
+      <div class="card-body">
+        <h5 class="card-title">{{ prd.name }}</h5>
+        <p class="card-text">ID: {{ prd.id }}</p>
+        <p class="card-text">
+          Quantity:
+          <span *ngIf="prd.quantity !== 0">{{ prd.quantity }}</span>
+          <span *ngIf="prd.quantity === 0" class="text-danger">Out of Stock</span>
+        </p>
+        <p class="card-text">
+          Price:
+          {{ prd.price | currency:'USD':'symbol' }} /
+          {{ prd.price | USDtoEGP | currency:'EGP':'code' }}
+        </p>
+        <input #itemsCount type="number" class="form-control mb-2" placeholder="Count" min="1" value="1" />
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-sm btn-primary" (click)="openPrdDetails(prd.id)">Details</button>
+          <button class="btn btn-sm btn-success" 
+            (click)="buy(prd, (itemsCount.value && +itemsCount.value > 0) ? +itemsCount.value : 1)">
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- <h3 class="text=danger">
+    [To Be Removed] for Test:<br>
+    Order Total Price {{orderTotalPrice}}
+
+  </h3> -->

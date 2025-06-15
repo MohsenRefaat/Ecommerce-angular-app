@@ -1,0 +1,70 @@
+{
+    "Categories": [
+      {
+        "id": 1,
+        "name": "laptops"
+      },
+      {
+        "id": 2,
+        "name": "Tablets"
+      },
+      {
+        "id": 3,
+        "name": "IPhones"
+      }
+    ],
+    "Products": [
+      {
+        "id": 1,
+        "name": "Redmi Note 10 pro",
+        "price": 300,
+        "quantity": 30,
+        "imgURL": "https://fakeimg.p1/250x100",
+        "categoryID": 1
+      },
+      {
+        "id": 2,
+        "name": "New Laptop",
+        "price": 300,
+        "quantity": 30,
+        "imgURL": "https://fakeimg.p1/250x100",
+        "categoryID": 2
+      },
+      {
+        "id": 3,
+        "name": "New ThinkPad",
+        "price": 300,
+        "quantity": 30,
+        "imgURL": "https://fakeimg.p1/250x100",
+        "categoryID": 3
+      },
+      {
+        "id": 4,
+        "name": "IPhone oooooo",
+        "price": 300,
+        "quantity": 30,
+        "imgURL": "https://fakeimg.p1/250x100",
+        "categoryID": 4
+      },
+      {
+        "id": 5,
+        "name": "Realme c53",
+        "price": 300,
+        "quantity": 30,
+        "imgURL": "https://fakeimg.p1/250x100",
+        "categoryID": 5
+      },
+      {
+        "id": 6,
+        "name": "Samsung Galaxy",
+        "price": 600,
+        "quantity": 60,
+        "imgURL": "https://fakeimg.p1/250x100",
+        "categoryID": 6
+      }
+    ]
+  }
+  
+
+
+

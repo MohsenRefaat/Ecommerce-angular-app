@@ -1,0 +1,2 @@
+<button [disabled]="isUserLogged" type="button" class="btn btn-primary m-6" (click)="login()">Login</button>
+<button [disabled]="!isUserLogged"type="button" class="btn btn-warning m-5" (click)="logout()">Logout</button>
