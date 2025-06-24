@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IProduct } from '../../../models/iproduct';
 import { USDtoEGPPipe } from "../../../pipes/usdto-egp.pipe";
-import { LightBoxDirective } from '../../../Directives/light-box.directive';
 import { StaticProductsService } from '../../../services/static-products.service';
 import { Router, RouterModule } from '@angular/router';
 import { CartService } from '../../../services/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
-  imports: [CommonModule, FormsModule, USDtoEGPPipe, LightBoxDirective, RouterModule],
+  imports: [CommonModule, FormsModule, USDtoEGPPipe, RouterModule],
   templateUrl: './product-list.component.html',
   standalone: true,
   styleUrls: ['./product-list.component.scss'],

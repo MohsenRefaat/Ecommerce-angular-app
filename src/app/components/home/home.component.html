@@ -1,1 +1,7 @@
-assasas
+<img src="{{storeInfo.imgURL}}" alt="" class="img-fluid m-1">
+<h1>{{storeInfo.name}}</h1>
+<ul>
+    <li *ngFor="let item of storeInfo.branches">
+        {{item}}
+    </li>
+</ul>

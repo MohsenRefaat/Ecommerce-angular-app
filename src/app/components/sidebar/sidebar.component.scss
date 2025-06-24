@@ -1,0 +1,19 @@
+.nav-link {
+  color: #ecf0f1 !important;
+  margin-bottom: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+#sidebar {
+  background-color:rgb(243, 98, 14);
+  height: 250px;
+  padding: 20px;
+}
+.container ul li {
+  text-decoration: none;
+}

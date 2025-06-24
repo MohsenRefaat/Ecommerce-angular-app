@@ -1,1 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
+.main-wrapper {
+  min-height: 100vh;
+}
+
+.container-fluid {
+  flex: 1;
+}
+.fixed-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #17a2b8;
+  overflow-y: auto;
+  padding: 1rem;
+  z-index: 1000;
+}
+.main-content {
+  margin-left: 220px;
+  padding: 1rem;
+}

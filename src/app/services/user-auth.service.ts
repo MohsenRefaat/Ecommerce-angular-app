@@ -6,12 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserAuthService {
   private isLoggedSubject:BehaviorSubject<boolean>
-  // isUserLoggedIn(): boolean {
-  //   if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-  //     return localStorage.getItem('userLogged') === 'true'; 
-  //   }
-  //   return false;
-  // }
+
 
   constructor() { 
     this.isLoggedSubject=new BehaviorSubject<boolean> (false);

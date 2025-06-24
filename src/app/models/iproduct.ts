@@ -4,7 +4,7 @@ json?: any;
     name:string;
     price:number;
     quantity:number;
-    imgURL?:string;
+    imgURL?:string[];
     categoryID:number;
 
 }

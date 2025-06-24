@@ -1,13 +1,16 @@
-<app-header></app-header>
-<div class="container-fluid g-0">
-    <section class="row flex-nowrap">
-        <div class="d-none d-md-block col-md-3 col-lg-2">
-            <app-sidebar ></app-sidebar>
-        </div>
-        <div class="col-12 col-md-9 col-lg-10">
-            <router-outlet></router-outlet>
-            </div>
-    </section>
-</div>
 
-<app-footer></app-footer>
+<app-header></app-header>
+<div class="main-wrapper d-flex flex-column min-vh-100">
+  <div class="container-fluid flex-grow-1">
+    <section class="row flex-nowrap">
+      <div class="d-none d-md-block col-md-3 col-lg-2 p-0 bg-info min-vh-100">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-12 col-md-9 col-lg-10 content ms-0 ms-md-3" style="margin-left: 200px; padding:1rem;">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+  </div>
+
+  <app-footer></app-footer>
+</div>

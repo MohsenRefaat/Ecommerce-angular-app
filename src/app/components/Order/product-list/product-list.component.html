@@ -47,27 +47,33 @@
     </tbody>
 </table> -->
 <div class="row g-3">
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let prd of prdListOfCat;">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let prd of prdListOfCat">
     <div class="card h-100 shadow-sm">
-      <img LightBox [src]="prd.imgURL" class="card-img-top" alt="{{prd.name}}"
-        style="height: 150px; object-fit: contain;">
+      <img [src]="prd.imgURL?.[0] || 'https://picsum.photos/200?random=' + prd.id" class="card-img-top img-fluid p-2"
+        alt="{{prd.name}}"
+        style="height: 150px; object-fit: contain; background-color: #f8f9fa; border-bottom: 1px solid #ddd;">
+
       <div class="card-body">
         <h5 class="card-title">{{ prd.name }}</h5>
-        <p class="card-text">ID: {{ prd.id }}</p>
+        <p class="card-text text-muted">ID: {{ prd.id }}</p>
+
         <p class="card-text">
           Quantity:
-          <span *ngIf="prd.quantity !== 0">{{ prd.quantity }}</span>
+          <span *ngIf="prd.quantity !== 0" class="text-success">{{ prd.quantity }}</span>
           <span *ngIf="prd.quantity === 0" class="text-danger">Out of Stock</span>
         </p>
+
         <p class="card-text">
           Price:
           {{ prd.price | currency:'USD':'symbol' }} /
           {{ prd.price | USDtoEGP | currency:'EGP':'code' }}
         </p>
+
         <input #itemsCount type="number" class="form-control mb-2" placeholder="Count" min="1" value="1" />
+
         <div class="d-flex justify-content-between">
           <button class="btn btn-sm btn-primary" (click)="openPrdDetails(prd.id)">Details</button>
-          <button class="btn btn-sm btn-success" 
+          <button class="btn btn-sm btn-success" [disabled]="prd.quantity === 0"
             (click)="buy(prd, (itemsCount.value && +itemsCount.value > 0) ? +itemsCount.value : 1)">
             Add
           </button>
@@ -76,6 +82,7 @@
     </div>
   </div>
 </div>
+
 <hr>
 <!-- <h3 class="text=danger">
     [To Be Removed] for Test:<br>
