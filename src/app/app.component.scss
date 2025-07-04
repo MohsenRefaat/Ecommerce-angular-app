@@ -11,18 +11,16 @@ html, body {
 .container-fluid {
   flex: 1;
 }
+.main-content {
+  margin-left: 220px;
+  padding: 1rem;
+}
 .fixed-sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 220px;
-  background-color: #17a2b8;
-  overflow-y: auto;
-  padding: 1rem;
+  width: 16.666667%; /* = 2 من 12 عمود */
   z-index: 1000;
-}
-.main-content {
-  margin-left: 220px;
-  padding: 1rem;
+  overflow-y: auto;
 }

@@ -6,10 +6,11 @@ import { USDtoEGPPipe } from "../../../pipes/usdto-egp.pipe";
 import { StaticProductsService } from '../../../services/static-products.service';
 import { Router, RouterModule } from '@angular/router';
 import { CartService } from '../../../services/services/cart.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [CommonModule, FormsModule, USDtoEGPPipe, RouterModule],
+  imports: [CommonModule, FormsModule, USDtoEGPPipe, RouterModule,RouterLink],
   templateUrl: './product-list.component.html',
   standalone: true,
   styleUrls: ['./product-list.component.scss'],
@@ -38,7 +39,7 @@ export class ProductListComponent implements OnInit, OnChanges {
 
     this.cartService.cartCount$.subscribe(count => {
       this.cartCount = count;
-      console.log('عدد المنتجات في السلة:', this.cartCount);
+      console.log('', this.cartCount);
     });
   }
 

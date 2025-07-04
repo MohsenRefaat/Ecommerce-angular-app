@@ -28,7 +28,7 @@ export class OrderMasterComponent implements OnInit, AfterViewInit {
     ]
   }
   ngAfterViewInit(): void {
-    this.clientNameInpElem.nativeElement.value="Your Name Here";
+    this.clientNameInpElem.nativeElement.value="Mo7sen refaat";
     this.clientNameInpElem.nativeElement.style.border="2px solid red"
     // this.prdListComObj.prdList
     ;
