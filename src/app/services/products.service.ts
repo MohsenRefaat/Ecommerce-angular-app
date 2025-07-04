@@ -4,8 +4,8 @@ import { catchError, map, Observable, pipe, retry, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { stringify } from 'querystring';
-import { environment } from '../../src/environment';
 import { APIResponseVM } from '../view models/apiresponse-vm';
+import { environment } from '../../environment';
 
 @Injectable({
   providedIn: 'root'
