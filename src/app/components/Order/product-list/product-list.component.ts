@@ -10,13 +10,13 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [CommonModule, FormsModule, USDtoEGPPipe, RouterModule,RouterLink],
+  imports: [CommonModule, FormsModule, USDtoEGPPipe, RouterModule, RouterLink],
   templateUrl: './product-list.component.html',
   standalone: true,
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit, OnChanges {
-
+  public prdList!: IProduct[];
   prdListOfCat: IProduct[] = [];
   @Input() sentCatID: number = 0;
   @Output() totalPriceChanged: EventEmitter<number> = new EventEmitter<number>();
@@ -28,7 +28,7 @@ export class ProductListComponent implements OnInit, OnChanges {
     private staticPrdService: StaticProductsService,
     private cartService: CartService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnChanges(): void {
     // this.prdListOfCat = this.staticPrdService.getProductsByCatID(this.sentCatID);

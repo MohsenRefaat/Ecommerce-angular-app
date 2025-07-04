@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.fixed-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 16.666667%; 
+  z-index: 1000;
+  overflow-y: auto;
+}
+

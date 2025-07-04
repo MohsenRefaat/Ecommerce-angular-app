@@ -39,8 +39,29 @@ export class OrderMasterComponent implements OnInit, AfterViewInit {
   onTotalPriceChanged(totalPrice:number) {
   this.receivedOrderTotalPrice=totalPrice;
   }
-  completeOrder () {
-    // this.prdListComObj.prdList[0].quantity-=1;
+ completeOrder () {
+  const clientName = this.clientNameInpElem.nativeElement.value;
+
+  if (!clientName) {
+    alert("Please enter your name before placing the order.");
+    return;
   }
 
+  if (!this.prdListComObj || !this.prdListComObj.prdList) {
+    alert("Products list is not ready yet.");
+    return;
+  }
+
+const selectedProducts = this.prdListComObj.prdList.filter((p: { quantity: number }) => p.quantity > 0);
+  if (selectedProducts.length === 0) {
+    alert("No products selected.");
+    return;
+  }
+
+  console.log("Order placed by:", clientName);
+  console.log("Products:", selectedProducts);
+  console.log("Total Price:", this.receivedOrderTotalPrice);
+
+  alert("Order placed successfully!");
+}
 }

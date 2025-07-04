@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Top Phones Overview</h2>
+  <div class="row g-3">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let phone of phoneList">
+      <div class="card h-100 shadow">
+        <img [src]="phone.imgURL" alt="" class="w-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ phone.name }}</h5>
+          <p class="card-text">Price: {{ phone.price }} EGP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,7 @@ export class StaticProductsService {
         name: 'LenovoThinkpad laptop',
         price: 100000000,
         quantity: 1,
-        imgURL: ['https://fakeimg.pl/250x100/'],
+        imgURL: ['assets/mo7sen 2.webp'],
         categoryID: 1
       },
       {
@@ -24,7 +24,7 @@ export class StaticProductsService {
         name: 'Apple Mactop laptop',
         price: 20656560,
         quantity: 0,
-        imgURL: ['https://fakeimg.pl/250x100/'],
+        imgURL: ['assets/mo7sen 3.jpg'],
         categoryID: 1
       },
       {
@@ -32,7 +32,7 @@ export class StaticProductsService {
         name: 'Lenovo Tablet 2',
         price: 3000,
         quantity: 10,
-        imgURL: ['https://fakeimg.pl/250x100/'],
+        imgURL: ['assets/mo7sen 4.jpg'],
         categoryID: 2
       },
       {
@@ -40,7 +40,7 @@ export class StaticProductsService {
         name: 'IPad ',
         price: 400,
         quantity: 2,
-        imgURL: ['https://fakeimg.pl/250x100/'],
+        imgURL: ['assets/mo7sen 5.avif'],
         categoryID: 2
       },
       {
@@ -48,7 +48,7 @@ export class StaticProductsService {
         name: 'Samsung Tablet',
         price: 5000,
         quantity: 0,
-        imgURL: ['https://fakeimg.pl/250x100/'],
+        imgURL: ['assets/mo7sen 9.webp'],
         categoryID: 3
       },
       {
@@ -56,7 +56,7 @@ export class StaticProductsService {
         name: 'Samsung note 10',
         price: 600,
         quantity: 1,
-        imgURL: ['https://fakeimg.pl/250x100/'],
+        imgURL: ['assets/mo7sen 7.webp'],
         categoryID: 3
       }
     ];
